@@ -1,0 +1,48 @@
+Project Name: HR Tool Interne Positionsvermittlung
+Client: Miss Laura Schumm
+Developers: Subhashini Jantwal (Group Leader), Mohammed Adnan Sirur, Gopinath Mylapura Anjaneyareddy , Muhammad Hamid and  Jayanth Jain Hassan Ajithkumar
+Tutor: Alyona Morozova                                                                              	   
+ Date:30/06/2017
+ 
+Weekly Progress Report #8
+ 
+Activities/tasks planned for the week 
+
+Current Week Tasks	Group members  Assigned
+Updated requirements and use case from 1st iteration	Subhashini
+GUI paper prototypes for all the use cases,including the exceptional scenarios	Subhashini
+Updated UML class diagram and UML Sequence diagrams for at least 6 core and diverse use cases	Jayanth,Hamid, Gopinath
+A working prototype implementing most of the musthave
+requirements	Adnan,Gopinath,Subhashini,Hamid ,Jayanth
+  Git lab Issues, Time Log & Progress Report
+	Adnan,Gopinath,Subhashini,Hamid ,Jayanth
+
+ Tasks/activities that were achieved during the week
+
+Tasks completed during the week	Group members  Assigned
+GUI paper prototypes for all the use cases,including the exceptional scenarios	Subhashini
+  Gitlab Issues, Time Log & Progress Report	Adnan,Gopinath,Subhashini,Hamid ,Jayanth
+Updated requirements and use case from 1st
+iteration	Subhashini
+Updated UML class diagram and UML Sequence diagrams for at least 6 core and diverse use cases	Jayanth,Hamid, Gopinath
+A working prototype implementing most of the musthave requirements	Adnan,Gopinath,Subhashini,Hamid ,Jayanth
+ 
+In-progress/ Pending tasks and issues
+- Implementation of all functionalities
+- Implementing may-have requirements with highest priority
+- Generate/write test cases
+
+Plan for the next week
+
+
+Next Week Tasks	Group members  Assigned
+Generate/Write more tests for the newly implemented features	Adnan,Gopinath,Subhashini,Hamid ,Jayanth
+Execute Regression, Unit and Integration test  suites, report and fix bugs	Adnan,Gopinath,Subhashini,Hamid ,Jayanth
+ Git lab Issues, Time Log & Progress Report	Adnan,Gopinath,Subhashini,Hamid ,Jayanth
+Implementing may-have requirements with highest priority	Adnan,Gopinath,Subhashini,Hamid ,Jayanth
+
+Implementing  all of the must have requirements	Adnan,Gopinath,Subhashini,Hamid ,Jayanth
+Provide Gitlab issues on reported bugs, fixed bugs
+and written/generated test cases	Adnan,Gopinath,Subhashini,Hamid ,Jayanth
+Client and Tutor meeting	Adnan,Gopinath,Subhashini,Hamid ,Jayanth
+Meeting with SE chair for feedback on UML diagrams and Architecture review	Adnan,Gopinath,Subhashini,Hamid ,Jayanth

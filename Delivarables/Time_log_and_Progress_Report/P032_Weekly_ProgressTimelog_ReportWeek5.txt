@@ -1,0 +1,202 @@
+﻿Project Name: HR Tool Interne Positionsvermittlung
+Client: Miss Laura Schumm
+Developers: Subhashini Jantwal (Group Leader), Mohammed Adnan Sirur, Gopinath Mylapura Anjaneyareddy , Muhammad Hamid and  Jayanth Jain Hassan Ajithkumar
+Tutor: Alyona Morozova                                                                                           Date:09/06/2017
+ 
+Weekly Progress Report #5
+ 
+Activities/tasks planned for the week 
+Activities/tasks
+	Group members responsible & involved
+	Client meet to discuss wireframes , changes to requirements , discuss prototype as well as use cases
+	Gopinath,Hamid,Jayanth, Subhashini and Adnan
+	Weekly meeting with Tutor to discuss POA for the week 
+	Gopinath,Hamid,Jayanth, Subhashini and Adnan
+	Update Use case and requirements documents based on customer feedback
+	Subhashini
+	Git Lab updates : Creating issues , logging tasks 
+	Gopinath,Hamid,Jayanth, Subhashini and Adnan
+	 Start implementing must-have requirements
+(aim to complete 25% must have each in 2 weeks, so about 3 must have features a week)
+	Gopinath,Hamid,Jayanth, Subhashini and Adnan
+	Client Coordination 
+	Subhashini
+	Begin creating UML class diagrams
+	Adnan, Jayanth
+	Start working on UML sequence diagrams
+	Gopinath,Hamid,Jayanth, Subhashini and Adnan
+	 
+Tasks/activities that were achieved during the week
+Activities/tasks
+	Group members responsible & involved
+	Client meet to discuss wireframes , changes to requirements as well as use cases
+	Gopinath,Hamid,Jayanth, Subhashini and Adnan
+	Weekly meeting with Tutor to discuss POA for the week 
+	Gopinath,Hamid,Jayanth, Subhashini and Adnan
+	Update Use case and requirements documents based on customer feedback
+	Subhashini
+	Git Lab updates : Creating issues , logging tasks 
+	Gopinath,Hamid,Jayanth, Subhashini and Adnan
+	 Set up the environments and tools  for project implementation. Start implementing must-have requirements
+(aim to complete 25% must have each in 2 weeks, so about 4 must have features a week)
+	Gopinath,Hamid,Jayanth, Subhashini and Adnan
+	Client Coordination , updating weekly report
+	Subhashini
+	Begin creating UML diagrams
+	Adnan, Jayanth
+	Start working on UML sequence diagrams
+	Gopinath,Hamid,Jayanth, Subhashini and Adnan
+	 
+In-progress/ Pending tasks and issues
+* Implementation of the Must Have Features 
+
+
+
+
+
+
+Plan for the next week
+Next Week Tasks
+	Group members  Assigned
+	UML Diagrams and Sequence Diagrams
+	Adnan,Gopinath,Subhashini,Hamid ,Jayanth
+	Implementation of remaining 25% Must Have features
+	Adnan,Gopinath,Subhashini,Hamid ,Jayanth
+	Update Use Case Document
+	Subhashini
+	Weekly meeting with tutor for feedback
+	Adnan,Gopinath,Subhashini,Hamid ,Jayanth
+	Git lab Issues, Time Log & Progress Report
+
+
+	Adnan,Gopinath,Subhashini,Hamid ,Jayanth
+	 Work on the test plan
+	Gopinath
+	 
+Time Log for Current Week 
+
+
+ 
+Team Member Name
+	Tasks
+	Time Spent(Hours)
+	Total Number of Hours
+	Subhashini Jantwal
+	Attended client meeting to discuss Use Cases and requirements update
+	1
+	17
+	Attended Tutor Meeting and internal meeting, discussed week’s plan . progress  and tasks
+	2
+	Updating the Use Case Document and the Requirements Document . ( As discussed with Tutor , will be sharing the Use Case Document with client for feedback)
+	2.5
+	Setup the Machine for project. Installing SBT, playframework, JDK, Intelli j and Mongodb.
+	2
+	Tutorials on Play framework and Mongodb.
+	2
+	Implementation of must have’s - Login Page and Job seekers page
+	5
+	Worked on UML sequence diagrams 
+	1.5
+	Creating , maintaining and sharing the time log and progress report
+	1 
+	 
+	 
+	 
+	 
+	Gopinath Mylapura Anjaneyareddy
+	
+
+Creating Pop-window and forms for “Forgot password” and “Hire-People” features in the Login page of HR website
+Working on front-end using HTML, CSS, Bootstrap
+
+
+	7
+	19
+	Learning on Html ,bootstrap,css  installing atom.
+	1
+	Internal meeting with team discussing project progress, updates 
+	1
+	Attended Tutor Meeting,discussed week’s plan and progress
+	0.5
+	Meeting with Client to discuss vertical prototype,wireframes and use-cases
+
+
+	1
+	Worked on UML sequence diagrams 
+	1.5
+	Setup the Machine for project. Installing SBT, playframework, JDK, Intelli j and Mongodb.
+	2
+	Implementation of must have’s - Recruiter profile page
+	5
+	 
+	 
+	 
+	 
+	Mohammed Adnan Sirur
+	Attended Tutor Meeting and internal meeting, discussed week’s plan . progress  and tasks
+	2.5
+	17
+	Meeting with Client to discuss vertical prototype, wireframes and use-cases
+
+
+	1
+	Worked on UML class diagram with Jayanth
+	2
+	Setup the Machine for project. Installing SBT, playframework, JDK, Intelli j and Mongodb.
+	2
+	Saw Tutorials on Play framework.
+	3
+	Implementation of must have’s - Login Page and Job seekers page
+	5
+	Worked on UML sequence diagrams 
+	1.5
+	 
+ 
+ 
+ 
+ 
+ 
+	 
+	 
+	 
+	Muhammad Hamid
+	Attended Tutor Meeting, discussed week’s plan and progress 
+	0.5
+	17  
+	Creating the job seekers profile page HTML
+And writing scripts for DB
+	7
+	Meeting with Client to discuss vertical prototype, wireframes and use-cases
+	1
+	Implementation of must have’s - Recruiter profile page
+
+
+	5
+	Setup the Machine for project. Installing SBT, playframework, JDK, Intelli j and Mongodb.
+	2
+	Worked on UML sequence diagrams 
+	1.5
+	 
+	 
+	 
+	 
+	Jayanth Jain Hassan Ajithkumar
+	Weekly meeting with Tutor to discuss the use cases and weekly progress
+	1
+	20.5
+	DIscussing the UML class diagram.
+	2
+	Implementing the class UML diagram
+	3
+	Setup the Machine for project. Installing SBT, playframework, JDK, Intelli j and Mongodb.
+	2
+	Implementation of must have’s - Login Page and Job seekers page
+	5
+	Worked on UML sequence diagrams 
+	1.5
+	Going through play framework tutorial
+	5
+	
+
+	Meeting with Client to discuss vertical prototype, wireframes and use-cases
+	1

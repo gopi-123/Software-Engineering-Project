@@ -1,0 +1,84 @@
+Project Name: HR Tool Interne Positionsvermittlung
+Client: Miss Laura Schumm
+Developers: Subhashini Jantwal (Group Leader), Mohammed Adnan Sirur, Gopinath Mylapura Anjaneyareddy , Muhammad Hamid and  Jayanth Jain Hassan Ajithkumar
+Tutor: Peter Tikhonov & Alyona Morozova                                                                            	     Date:26/05/2017
+ 
+Weekly Progress Report #3 
+Activities/tasks planned for the week ended
+Activities/tasks	Group members responsible & involved
+Weekly meeting with Tutor	Gopinath,Hamid,Jayanth, Subhashini ,Adnan
+Creating ,Revising the first draft,Discussing and finalizing on the revised requirements draft	Adnan,Gopinath,Subhashini,Hamid ,Jayanth
+Setting up the Git Lab repository structure	Adnan
+Attending Tutor meeting	Adnan,Gopinath,Subhashini,Hamid ,Jayanth
+Document Core Use cases Draft	Subhashini,Jayanth,Gopinath
+Four A4 pages of contract-style must/may/must
+not -have requirements Submission & Signing off	Subhashini,Laura(Client)
+Designing wireframes draft for the portals	Adnan,Hamid
+ 
+Tasks/activities that were achieved during the week
+Activities/tasks	Group members responsible & involved
+Tutor Meeting	Gopinath,Hamid,Jayanth, Subhashini Jantwal,Adnan
+Revising ,Refining the first Requirement draft,Discussing and finalizing on the revised requirements draft	Gopinath,Hamid,Jayanth, Subhashini Jantwal
+Document Core Use cases Draft	Subhashini,Jayanth,Gopinath
+Setting up the Git Lab repository structure	Adnan
+Designing wire-frames draft for the portals 	Adnan,Hamid 
+Submission of Four A4 pages of contract-style must/may/must
+not -have requirements  to client & Signing off	Subhashini
+Git lab issues	Adnan
+Creating ,maintaining and sharing the time log and progress report and week deliverable	Gopinath
+ 
+In-progress/ Pending tasks and issues
+Revise,Refine Document Core Usecases,Writing Final set of  all usecases for the project
+Wireframes for the Project
+ 
+ 
+Plan for the next week
+Next Week Tasks	Group members  Assigned
+Writing all the use cases for the project and finalizing them
+	Gopinath,Subhashini,Jayanth
+Setting up project architecture on gitlab and explain it to the team          	Adnan
+Creating,finalizing wire-frames and sharing them with the client	Adnan,Hamid
+Weekly meeting with tutor for feedback,tracking progress(Tuesday)	Adnan,Gopinath,Subhashini,Hamid ,Jayanth
+Vertical implementation of a core use case    	Adnan
+Gitlab Issues, Time Log & Progress Report, 1 Pressman-style core use case
+ A working Vertical prototype, partially implementing, the main scenario of use case	Adnan,Gopinath,Subhashini,Hamid ,Jayanth
+Meeting with Client	Adnan,Gopinath,Subhashini,Hamid ,Jayanth
+ 
+Time Log
+ 
+Team Member Name	Tasks	Time Spent(Hours)	Total Number of Hours
+Subhashini Jantwal	Wrote the Use Cases for the Recruiter 	3.5	9
+	Assisted team on finalizing the requirements document 	2	
+	worked on compiling and sharing the use case document - 1hr	1	
+	Attended the meeting with the tutor for discussions etc
+	1	
+	Client mails, coordination etc	1.5	
+	 	 	 
+Gopinath Mylapura Anjaneyareddy	Weekly meeting with Tutor to discuss the first draft of the requirements and other project deliverables	1	10.5
+	Understanding requirements doc,clarifying on requirement doc,Noting down requirement changes,Open questions to client,Modifications	2	
+	Reviewing  & Sharing  Internal feedback Document on Requirement to team	2	
+	Arranging Internal team Discussing,meeting and finalizing on the revised requirements draft	1	
+	Understanding use cases,listing down the draft of use cases	2	
+	Creating , maintaining and sharing the time log of Team member to Tutor	1	
+	Creating , maintaining and sharing the  progress report to Tutor	1.5	
+	 	 	 
+Mohammed Adnan Sirur	 Worked on the design of the wireframes with Hamid - 2 hrs                        	2	8
+	Worked on the project architecture - 3 hrs                        	3	
+	Attended the internal meeting for finalizing the requirements - 1 hr                        	1	
+	Attended the tutor meeting -    1 hr                        	1	
+	 Updating docs & issues in git lab - 1 hrs                        	1	
+			
+Muhammad Hamid	Designed wireframes for the entire portals - 6 hrs . 
+	6	9
+	Attended tutor meeting 1 hr 
+	1	
+	 Included the updated  requirements in the final requirements document 2 hrs
+	2	
+	 	 	 
+Jayanth Jain Hassan Ajithkumar	Wrote the Use Cases for the Job seeker - 4 hrs
+	4	7.5
+	Made changes to the final draft of SRS document and reviewed it with the team- 2.5 hrs 
+	2.5	
+	Attended the meeting with the tutor for discussions etc - 1 hr   	1	
+ 
+ 

@@ -1,0 +1,159 @@
+﻿Project Name: HR Tool Interne Positionsvermittlung
+Client: Miss Laura Schumm
+Developers: Subhashini Jantwal (Group Leader), Mohammed Adnan Sirur, Gopinath Mylapura Anjaneyareddy , Muhammad Hamid and  Jayanth Jain Hassan Ajithkumar
+Tutor: Alyona Morozova                                                                                           Date:02/06/2017
+ 
+Weekly Progress Report #4
+ 
+Activities/tasks planned for the week 
+Activities/tasks
+	Group members responsible & involved
+	Weekly meeting with Tutor
+	Gopinath,Hamid,Jayanth, Subhashini and Adnan
+	Creating Use Case Document 
+	Jayanth, Gopinath and Subhashini
+	Wireframes finalisation
+	Adnan,Gopinath,Subhashini,Hamid ,Jayanth
+	  Wireframes updation
+	Hamid and Adnan
+	   Git Lab updates
+	Gopinath,Hamid,Jayanth, Subhashini and Adnan
+	Client Coordination 
+	Subhashini
+	Vertical implementation of a core use case scenario
+	Adnan
+	Architecture finalization and setup
+	Adnan
+	 
+Tasks/activities that were achieved during the week
+Activities/tasks
+	Group members responsible & involved
+	Attended Tutor Meeting, discussed week’s plan and progress 
+	Gopinath,Hamid,Jayanth, Subhashini and Adnan
+	Created use case document
+	Jayanth (Job Seeker ), Gopinath (Admin ) and Subhashini (Recruiter)
+	Finalised Wireframes , to be shared with client by Monday
+	Hamid and Adnan
+	(individually) Recorded project activity on GitLab
+	Gopinath,Hamid,Jayanth, Subhashini , Adnan
+	Creating ,maintaining and sharing the time log and progress report and week deliverable
+	Subhashini with inputs from entire team 
+	Architecture Finalization
+	Adnan
+	Partial implementation of a core Use-case scenario
+	Adnan
+	 
+In-progress/ Pending tasks and issues
+* Meeting with client to show the vertical prototype which could not be presented to her due to unmatched schedules , the tutor was informed and the prototype submitted on time.
+* To share wireframes with client 
+
+
+Plan for the next week
+Next Week Tasks
+	Group members  Assigned
+	UML Diagrams
+	Subhashini, Gopinath and Jayanth
+	Implementation of Must Have features
+	Adnan,Gopinath,Subhashini,Hamid ,Jayanth
+	Update Use Case Document
+	Subhashini, Gopinath and Jayanth
+	Weekly meeting with tutor for feedback
+	Adnan,Gopinath,Subhashini,Hamid ,Jayanth
+	Client meeting to discuss project developments and discuss Wireframes
+	Adnan,Gopinath,Subhashini,Hamid ,Jayanth
+	 Git lab Issues, Time Log & Progress Report
+
+
+	Adnan,Gopinath,Subhashini,Hamid ,Jayanth
+	 
+Time Log for Current Week 
+
+
+ 
+Team Member Name
+	Tasks
+	Time Spent(Hours)
+	Total Number of Hours
+	Subhashini Jantwal
+	Attended Tutor Meeting, discussed week’s plan and progress 
+	1
+	8.5
+	Creating Use Case Document 
+	4.5
+	Setting up project milestones , creating and logging tasks & issues , logging time on Gitlab
+	2
+	Creating , maintaining and sharing the time log and progress report
+	1 
+	 
+	 
+	 
+	 
+	Gopinath Mylapura Anjaneyareddy
+	Attended Tutor Meeting, discussed week’s plan and progress 
+	1
+	9.5
+	Creating Use Case Document for Administrator
+	7
+	Internal meeting with team discussing wireframes,changes in use-case 
+
+
+	1
+	Review of Use-case document
+	0.5
+	
+
+	
+
+	
+
+	
+
+	 
+	 
+	 
+	 
+	Mohammed Adnan Sirur
+	Attended Tutor Meeting, discussed week’s plan and progress .
+	1
+	19
+	Setting up the project for the vertical implementation, updating the readme files for the setup of the project ,  logging  issues and logging time on Gitlab.
+	2.5
+	Worked on finalizing the Architecture.
+	2
+	Worked on partially implementing  a Use-case scenario.
+	11
+	Internal meeting for updating the team on the wireframe changes and clearing open questions.
+	1
+	Worked on finalizing and updating the wireframes of the project 
+	1.5
+	 
+ 
+ 
+ 
+ 
+ 
+	 
+	 
+	 
+	Muhammad Hamid
+	Attended Tutor Meeting, discussed week’s plan and progress 
+	1
+	10.5
+	Updated Wireframes
+	8
+	Developed a HTML page for the vertical prototype
+	1.5
+	 
+	 
+	 
+	 
+	Jayanth Jain Hassan Ajithkumar
+	Weekly meeting with Tutor to discuss the use cases and weekly progress
+	1
+	9
+	Use case Document for Job Seeker
+	4.5
+	Reviewing the use case Document
+	0.5
+	Learning Java Script, mySQL and other technologies needed for implementation.
+	3
