@@ -1,0 +1,261 @@
+/*
+ * Copyright 2017 HR Tool
+ * Designed by Muhammad Hamid
+ */
+ 
+html
+{
+	font-size: 100%;
+	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+}
+
+body, html
+{
+	margin: auto;
+	padding: auto;
+	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+	font-size: 14px;
+	line-height: 18px;
+	color: #000; !important;
+	background-color: #ccccff !important;
+}
+
+a
+{
+	text-decoration: none; !important;
+}
+
+p.strong
+{
+	font-weight: bold;
+}
+
+#header
+{
+	position:fixed; !important;
+	top:0;
+	right:0;
+	left:0;
+	margin-bottom:0;
+	z-index:1030;
+	width: auto;
+	height: 90px; !important;
+	background-color: #5b8ab9;
+	padding: 10px 20px 10px 20px;
+}
+
+img.logo
+{
+	width: 177px;
+	height: 71px;
+	float: left; !important;
+}
+
+.title
+{
+	color: #10427a; !important;
+	float: left;
+	display: block;
+	padding: 25px 20px;
+	font-size: 20px;
+	font-weight: 200;
+	line-height: 1;
+}
+.title:hover
+{
+	color: #10427a; !important;
+}
+
+#main
+{
+	margin-top: 90px;
+	margin-bottom: 50px;
+}
+
+#container
+{
+	margin: 0 auto 0 auto;
+	padding: 20px 10px;
+	/*border-radius: 5px;*/
+	/*border: 1px solid #ddd;*/
+	text-align: center;
+}
+
+.user-icon
+{
+	width: 90px;
+	height: 90px;
+	margin: 10px auto 10px auto;
+	display: block;
+	opacity: 0.5;
+	filter: alpha(opacity=50); /* For IE8 and earlier */
+}
+
+#login-wrapper
+{
+	margin-right: auto;
+	margin-left: auto;
+	width: 420px;
+	text-align: center;
+}
+
+#name, #email, #password, #repeatPassword
+{
+	width: 300px; !important;
+	height: 25px;
+	float: left;
+}
+
+label[for=name], label[for=email], label[for=password], label[for=repeatPassword]
+{
+	width: 100px;
+	height: 25px;
+	display: inline-block;
+	float: left;
+	text-align: left;
+	font-weight: bold;
+}
+
+input.login-button
+{
+	width: 300px; !important;
+	padding: 10px;
+	margin: 5px 0 5px 80px;
+}
+
+.signup-button
+{
+	width: 180px; !important;
+	/*display: inline-block;*/
+	padding: 10px;
+	margin: 5px 0 5px 80px;
+}
+
+.hirepeople-button
+{
+	width: 180px; !important;
+	/*display: inline-block;*/
+	padding: 10px;
+	margin: 5px 0 5px 80px;
+}
+
+.wrapper
+{
+	padding-top: 20px;
+	padding-left: 20px;
+}
+
+input[type="text"], input[type="password"], input[type="date"], input[type="number"]
+{
+	height: 28px; !important;
+}
+
+label[for=eMail], label[for=userName], label[for=firstName], label[for=lastName], label[for=dOB], label[for=empID], label[for=phoneNo], label[for=category], label[for=languageSkills], label[for=computerSkills], label[for=department], label[for=experience], label[for=disability], label[for=empAt], label[for=empSince], label[for=fixedTerm], label[for=fixedTermTill], label[for=weeklyWorkingTime], label[for=specialWorkTime], label[for=currentJob], label[for=importantTasks], label[for=highestEducationLevel], label[for=additionalEducation], label[for=futureJobOpportunities], label[for=resume]
+{
+	float: left;
+	text-align: right;
+	width: 200px;
+	padding-left: 20px;
+}
+
+.forgot-password
+{
+    display: block;
+    margin: 10px 0 10px 80px;
+    font-weight: bold;
+    color: #333; !important;
+}
+
+#navigation
+{
+	margin-top: 90px;
+	padding: 20px;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	width: 15%;
+	height: 100%;
+	position: absolute;
+	/*overflow: hidden;*/
+	/*background-color: #85ACD3;*/
+}
+
+#contents
+{
+	margin-top: 90px;
+	padding: 0;
+	top: 0;
+	width: 85%;
+	height: 100%;
+	margin-left: 15%;
+	position: absolute;
+	/*overflow: hidden;*/
+}
+
+.table
+{
+	background-color: whitesmoke; !important;
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+thead
+{
+	border-bottom: 5px solid #cccccc;
+}
+
+.table-hover tbody tr td, .table-hover tbody tr th
+{
+	border-bottom: 5px solid #cccccc;
+}
+
+.table-hover tbody tr:hover td, .table-hover tbody tr:hover th
+{
+	background-color: #e1e1e8;
+	border-bottom: 5px solid #cccccc;
+}
+
+.nav-tabs > li, .nav-pills > li {
+	float:none;
+	display:inline-block;
+	*display:inline; /* ie7 fix */
+	zoom:1; /* hasLayout ie7 trigger */
+}
+
+.nav-tabs, .nav-pills {
+	text-align:center;
+}
+
+.nav-pills > li > a {
+	background-color: #eeeeee;
+}
+
+.nav-pills > li > a:hover {
+	background-color: #e1e1e8;
+}
+
+#footer
+{
+	position:fixed; !important;
+	width: 100%;
+	height: 30px;
+	left: 0;
+	bottom: 0;
+	background-color: #001329;
+}
+
+#footer p
+{
+	text-align: center;
+	color: #aca8a3;
+	padding: 5px;
+}
+
+.user-profile-disable
+{
+	z-index: 1;
+	pointer-events: none;
+	cursor: not-allowed;
+	opacity: 0.5;
+}

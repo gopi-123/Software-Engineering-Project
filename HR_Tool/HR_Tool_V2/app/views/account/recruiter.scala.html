@@ -1,0 +1,169 @@
+@(userProfileList: List[models.UserProfile], filterForm: Form[Account.Filter], role: String)
+
+@import helper._
+@import helper.twitterBootstrap._
+
+@main(Messages("Job Sucherprofile")) {
+
+    <!-- Navigation Start -->
+    <div id="navigation">
+    @form(routes.Account.doViewProfiles, 'class -> "form-horizontal") {
+        <h4>Ergebnisse anzeigen für</h4>
+        <p class="strong">Erfahrung</p>
+        <div class="checkbox">
+            <label><input type="checkbox" id="experience1" name="experience1" placeholder="" value="1">1 Jahr</label>
+            <br>
+            <label><input type="checkbox" id="experience2" name="experience2" placeholder="" value="2">2 Jahre</label>
+            <br>
+            <label><input type="checkbox" id="experience3" name="experience3" placeholder="" value="3">3 Jahre</label>
+            <br>
+            <label><input type="checkbox" id="experience4" name="experience4" placeholder="" value="4">4 Jahre und mehr</label>
+        </div>
+        <br>
+        <p class="strong">Sprachkenntnisse</p>
+        <div class="checkbox">
+            <label><input type="checkbox" id="langGA1" name="langGA1" placeholder="" value="German-A1">German-A1</label>
+            <br>
+            <label><input type="checkbox" id="langGA2" name="langGA2" placeholder="" value="German-A2">German-A2</label>
+            <br>
+            <label><input type="checkbox" id="langGB1" name="langGB1" placeholder="" value="German-B1">German-B1</label>
+            <br>
+            <label><input type="checkbox" id="langGB2" name="langGB2" placeholder="" value="German-B2">German-B2</label>
+            <br>
+            <label><input type="checkbox" id="langGC1" name="langGC1" placeholder="" value="German-C1">German-C1</label>
+            <br>
+            <label><input type="checkbox" id="langGC2" name="langGC2" placeholder="" value="German-C2">German-C2</label>
+            <br>
+            <label><input type="checkbox" id="frenchA1" name="frenchA1" placeholder="" value="French-A1">French-A1</label>
+            <br>
+            <label><input type="checkbox" id="frenchA2" name="frenchA2" placeholder="" value="French-A2">French-A2</label>
+            <br>
+            <label><input type="checkbox" id="frenchB1" name="frenchB1" placeholder="" value="French-B1">French-B1</label>
+            <br>
+            <label><input type="checkbox" id="frenchB2" name="frenchB2" placeholder="" value="French-B2">French-B2</label>
+            <br>
+            <label><input type="checkbox" id="frenchC1" name="frenchC1" placeholder="" value="French-C1">French-C1</label>
+            <br>
+            <label><input type="checkbox" id="frenchC2" name="frenchC2" placeholder="" value="French-C2">French-C2</label>
+            <br>
+            <label><input type="checkbox" id="spanishA1" name="spanishA1" placeholder="" value="Spanish-A1">Spanish-A1</label>
+            <br>
+            <label><input type="checkbox" id="spanishA2" name="spanishA2" placeholder="" value="Spanish-A2">Spanish-A2</label>
+            <br>
+            <label><input type="checkbox" id="spanishB1" name="spanishB1" placeholder="" value="Spanish-B1">Spanish-B1</label>
+            <br>
+            <label><input type="checkbox" id="spanishB2" name="spanishB2" placeholder="" value="Spanish-B2">Spanish-B2</label>
+            <br>
+            <label><input type="checkbox" id="spanishC1" name="spanishC1" placeholder="" value="Spanish-C1">Spanish-C1</label>
+            <br>
+            <label><input type="checkbox" id="spanishC2" name="spanishC2" placeholder="" value="Spanish-C2">Spanish-C2</label>
+            <br>
+            <label><input type="checkbox" id="italienA1" name="italienA1" placeholder="" value="Italien-A1">Italien-A1</label>
+            <br>
+            <label><input type="checkbox" id="italienA2" name="italienA2" placeholder="" value="Italien-A2">Italien-A2</label>
+            <br>
+            <label><input type="checkbox" id="italienB1" name="italienB1" placeholder="" value="Italien-B1">Italien-B1</label>
+            <br>
+            <label><input type="checkbox" id="italienB2" name="italienB2" placeholder="" value="Italien-B2">Italien-B2</label>
+            <br>
+            <label><input type="checkbox" id="italienC1" name="italienC1" placeholder="" value="Italien-C1">Italien-C1</label>
+            <br>
+            <label><input type="checkbox" id="italienC2" name="italienC2" placeholder="" value="Italien-C2">Italien-C2</label>
+            <br>
+            <label><input type="checkbox" id="english" name="english" placeholder="" value="English">Englisch</label>
+        </div>
+        <br>
+        <p class="strong">EDV-Kenntnisse</p>
+        <div class="checkbox">
+            <label><input type="checkbox" id="word" name="word" placeholder="" value="MS-Office Word" class="input-xlarge">MS-Office Word</label>
+            <br>
+            <label><input type="checkbox" id="excel" name="excel" placeholder="" value="MS-Office Excel" class="input-xlarge">MS-Office Excel</label>
+            <br>
+            <label><input type="checkbox" id="powerPoint" name="powerPoint" placeholder="" value="MS-Office Powerpoint" class="input-xlarge">MS-Office Powerpoint</label>
+            <br>
+            <label><input type="checkbox" id="access" name="access" placeholder="" value="MS-Office Access" class="input-xlarge">MS-Office Access</label>
+            <br>
+            <label><input type="checkbox" id="sAPHR" name="sAPHR" placeholder="" value="SAP-HR" class="input-xlarge">SAP-HR</label>
+            <br>
+            <label><input type="checkbox" id="sAPFI" name="sAPFI" placeholder="" value="SAP-FI" class="input-xlarge">SAP-FI</label>
+            <br>
+            <label><input type="checkbox" id="sAPMM" name="sAPMM" placeholder="" value="SAP-MM" class="input-xlarge">SAP-MM</label>
+        </div>
+        <br>
+        @if(role == "Admin") {
+            <p class="strong">Kategorie</p>
+            <div class="checkbox">
+                <label><input type="checkbox" id="academicAssistant" name="academicAssistant" placeholder="" value="">Wiss. Mitarbeiter</label>
+                <br>
+                <label><input type="checkbox" id="technician" name="technician" placeholder="" value="">Techniker</label>
+                <br>
+                <label><input type="checkbox" id="secretary" name="secretary" placeholder="" value="">Sekretariat</label>
+                <br>
+                <label><input type="checkbox" id="librarian" name="librarian" placeholder="" value="">Bibilothekar</label>
+                <br>
+                <label><input type="checkbox" id="craftsman" name="craftsman" placeholder="" value="">Handwerker</label>
+                <br>
+                <label><input type="checkbox" id="animalKeeeper" name="animalKeeeper" placeholder="" value="">Tierpfleger</label>
+                <br>
+                <label><input type="checkbox" id="studentAssistant" name="studentAssistant" placeholder="" value="">Stud. Angestellte</label>
+                <br>
+                <label><input type="checkbox" id="mittlerer" name="mittlerer" placeholder="" value="">Mittlerer Dienst</label>
+                <br>
+                <label><input type="checkbox" id="hoHerer" name="hoHerer" placeholder="" value="">Höherer Dienst</label>
+                <br>
+                <label><input type="checkbox" id="gehobener" name="gehobener" placeholder="" value="">Gehobener Dienst</label>
+            </div>
+        }
+        <br>
+        <input type="submit" value="anwenden" class="btn btn-primary btn-success" style="margin: 0 0 40px 40px;">
+        }
+    </div>
+        <!-- Navigation Close -->
+
+        <!-- Contents Start -->
+    <div id="contents">
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th width="60%">@form(routes.Account.doSortByExperience) {Details}</th>
+                    <th width="20%">@form(routes.Account.doSortByExperience) {<a><button class="fa fa-sort" aria-hidden="true">Erfahrung</button></a>}</th>
+                    <th width="20%">&nbsp;</th>
+                </tr>
+            </thead>
+            @for(index <- 0 until userProfileList.size()){
+                <tbody>
+                    <tr class="rowspace">
+                        <td scope="row">
+                            <b>Auf der Suche nach:</b> @userProfileList(index).category<br>
+                            <b>Aktuelle Abteilung:</b> @userProfileList(index).department<br>
+                            <b>An der UdS seit:</b> @userProfileList(index).empAt<br>
+                            <b>Unbefristet:</b> @userProfileList(index).fixedTerm<br>
+                            <b>Besachäftigungsumfang:</b> @userProfileList(index).weeklyWorkingTime<br>
+                            <b>Besondre Arbeitszeitregelungen:</b> @userProfileList(index).specialWorkTime<br>
+                            <b>Aktuell ausgeübte Tätigkeit:</b> @userProfileList(index).currentJob<br>
+                            <b>Wichtigsten Aufgaben:</b> @userProfileList(index).importantTasks<br>
+                            <b>Höchster Bildungsabchluss:</b> @userProfileList(index).highestEducationLevel<br>
+                            <b>Zusatzqualifikation:</b> @userProfileList(index).additionalEducation<br>
+                            <b>EDV-Kenntnisse:</b>
+                            @for(skill <- 0 until userProfileList(index).computerSkills.size()) {
+                                @userProfileList(index).computerSkills(skill)<br>
+                            }
+                            <b>Sprachkenntnisse:</b>
+                            @for(skills <- 0 until userProfileList(index).languageSkills.size()) {
+                                @userProfileList(index).languageSkills(skills)<br>
+                            }
+                            <b>Zukünftige Einzsatzmöglichkeit:</b> @userProfileList(index).futureJobOpportunities<br>
+                        </td>
+                        <td>@userProfileList(index).experience</td>
+                        <td>
+                            <a class="btn btn-default" style="width: 150px; margin: 5px;" href='@routes.Account.downloadCV(userProfileList(index).userName)' role="button">Herunterladen CV</a>
+                            <br>
+                            <a class="btn btn-default" style="width: 150px; margin: 5px;" href='@routes.Account.interestedProfile(userProfileList(index).userName)' role="button" target="_blank">Interessiert</a>
+                        </td>
+                    </tr>
+                </tbody>
+            }
+        </table>
+    </div>
+        <!-- Contents Close -->
+}

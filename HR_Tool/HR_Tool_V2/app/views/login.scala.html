@@ -1,0 +1,58 @@
+@(loginForm: Form[_])
+
+@import helper._
+@import helper.twitterBootstrap._
+@import com.feth.play.module.pa.views.html._
+
+@main(Messages("playauthenticate.login.title"), "login") {
+
+    <div id="container"> <!-- Container Start -->
+
+        <img class="user-icon" src="@routes.Assets.at("images/user-icon.png")" alt="" align="center"><br>
+        @* Display proprietary login form *@
+        @helper.form(routes.Application.doLogin) {
+
+            @if(loginForm.hasGlobalErrors) {
+                <p class="error">
+                    <span class="label label-important">@loginForm.globalError.message</span>
+                </p>
+            }
+
+            <div id="login-wrapper">
+            @_emailPartial(loginForm)
+            </div>
+            <br>
+            <div id="login-wrapper">
+            @inputPassword(
+                loginForm("password"),
+                '_showConstraints -> false,
+                '_label -> Messages("playauthenticate.login.password.placeholder")
+            )
+            </div>
+
+            <div id="login-wrapper">
+                <input class="btn btn-primary login-button" type="submit" value="@Messages("playauthenticate.login.now")">
+
+                <a class="forgot-password" href="javascript:void(0);" onclick="window.location.href = jsRoutes.controllers.Signup.forgotPassword($('#email').val() || null).absoluteURL();">@Messages("playauthenticate.login.forgot.password")</a>
+
+                <a class="btn btn-default  signup-button" href="@routes.Application.signup()">Anmelden</a>
+
+                <a class="btn btn-success hirepeople-button" href="@routes.Application.hirePeople()">Personal suchen</a>
+            </div>
+        }
+
+    </div> <!-- Container Close -->
+
+        <!-- <div class="span3">
+    @Messages("playauthenticate.login.oauth")
+    @* Display list of available providers *@
+    @_providerPartial(skipCurrent = false)
+    @providerAvailable("basic") { available: Boolean =>
+        @if(available) {
+            <br>
+            <a href="@com.feth.play.module.pa.controllers.routes.Authenticate.authenticate("basic")">@Messages("playauthenticate.login.basic")</a>
+        }
+    }
+    </div> -->
+
+}

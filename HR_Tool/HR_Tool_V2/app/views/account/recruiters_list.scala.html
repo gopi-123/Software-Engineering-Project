@@ -1,0 +1,65 @@
+@(userProfile: models.User, category: Form[models.User])
+
+@import helper._
+@import helper.twitterBootstrap._
+
+@main(Messages("playauthenticate.change.password.title")) {
+
+    <div id="container">
+
+        <table class="table" style="width: 50%; margin: 0px auto;">
+            <thead>
+                <tr>
+                    <th>@userProfile.name</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Name:</td>
+                    <td>@userProfile.name</td>
+                </tr>
+                <tr>
+                    <td>Email:</td>
+                    <td>@userProfile.email</td>
+                </tr>
+                <tr>
+                    <td>Personalnummer:</td>
+                    <td>@userProfile.empID</td>
+                </tr>
+                <tr>
+                    <td>Fakultät:</td>
+                    <td>@userProfile.department</td>
+                </tr>
+                <tr>
+                    <td>Zugang bis</td>
+                    <td>@userProfile.access_until</td>
+                </tr>
+                @form(routes.Account.doCategoryUpdate, 'class -> "form-horizontal", 'enctype -> "multipart/form-data") {
+                    <tr>
+                        <td>Kategorie</td>
+                        <td>
+                            <input type="hidden" id="name" name="name" placeholder="" value=@userProfile.name>
+                            <input class="form-control" list="category_acccess" name="category_acccess" placeholder=@userProfile.category_acccess required>
+                            <datalist id="category_acccess">
+                            <option value="Wiss. Mitarbeiter/in">
+                            <option value="Techniker/in">
+                            <option value="Sekretariat">
+                            <option value="Bibilothekar/in">
+                            <option value="Handwerker/in">
+                            <option value="Tierpfleger/in">
+                            <option value="Stud. Angestellte/r">
+                            <option value="Mittlerer Dienst">
+                            <option value="Höherer Dienst">
+                            <option value="Gehobener Dienst">
+                            </datalist>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><input type="submit" value="Speichern" class="btn btn-success" style="float: right;"></td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+
+    </div>
+}

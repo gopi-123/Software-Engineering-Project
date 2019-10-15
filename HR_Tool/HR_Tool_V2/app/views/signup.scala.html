@@ -1,0 +1,63 @@
+@(signupForm: Form[_])
+
+@import helper._
+@import helper.twitterBootstrap._
+
+@main(Messages("playauthenticate.signup.title"),"signup") {
+
+    <div class="wrapper">
+
+        <legend>@Messages("playauthenticate.signup.title")</legend>
+
+        @* Display proprietary login form *@
+        @helper.form(routes.Application.doSignup) {
+            @if(signupForm.hasGlobalErrors) {
+                <p class="error"><span class="label label-important">@signupForm.globalError.message</span></p>
+            }
+
+            <div class="form-horizontal form-group">
+                <div class="col-sm-4">
+                @inputText(
+                    signupForm("name"),
+                    '_label -> Messages("playauthenticate.signup.name")
+                )
+                </div>
+            </div>
+
+            <br><br><br>
+
+            <div class="form-horizontal form-group">
+                <div class="col-sm-4">
+                @_emailPartial(signupForm)
+                </div>
+            </div>
+
+            <br>
+
+            <div class="form-horizontal form-group">
+                <div class="col-sm-4">
+                @_passwordPartial(signupForm)
+                </div>
+            </div>
+
+            <br><br><br><br><br>
+
+            <input type="checkbox" name="" value="" checked="checked" required>Ich stimme den Benutzerregeln zu<br>
+
+            <div class="form-horizontal form-group">
+                <div class="col-sm-4">
+                    <input type="submit" value="@Messages("playauthenticate.signup.now")" class="btn btn-primary" style="margin-left: 300px">
+                </div>
+            </div>
+
+        }
+
+    </div>
+
+        <!-- <div class="span3">
+        @Messages("playauthenticate.signup.oauth")
+    @* Display list of available providers *@
+    @_providerPartial(skipCurrent=false)
+    </div> -->
+
+}

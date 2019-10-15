@@ -1,0 +1,85 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# Home page
+GET         /                                      controllers.Application.index()
+GET         /restricted                            controllers.Application.restricted()
+GET         /assets/javascript/routes.js           controllers.Application.jsRoutes()
+
+GET         /profile                               controllers.Application.profile()
+
+GET         /jobseekerUsers                        controllers.Application.admin_ViewJobseekerUsers()
+GET         /recruiterUsers                        controllers.Application.admin_ViewRecruiterUsers()
+
+GET         /user_profile                          controllers.Account.profile()
+POST        /user_profile                          controllers.Account.doUserProfile()
+
+GET         /hirePeople                            controllers.Application.hirePeople()
+POST        /hirePeople                            controllers.Application.doHirePeople()
+
+GET         /interestedProfile                     controllers.Account.interestedProfile(userName: String)
+GET         /downloadCV                            controllers.Account.downloadCV(userName: String)
+
+GET         /recruiter                             controllers.Account.viewProfiles()
+POST        /recruiter                             controllers.Account.doViewProfiles()
+
+GET         /grantAccess                           controllers.Account.grantAccessToRecruiter(email: String)
+GET         /evokeAccess                           controllers.Account.evokeAccessToRecruiter(email: String)
+GET         /categoryToRec                         controllers.Account.categoryToRecruiter(email: String)
+
+POST        /doCategoryUpdate			   controllers.Account.doCategoryUpdate()
+
+
+POST        /modifyAccess                          controllers.Account.modifyAccess()
+
+POST        /recruiter_exp                         controllers.Account.doSortByExperience()
+
+
+GET         /AddAccount                            controllers.Application.AddAccount()
+POST        /AddAccount                            controllers.Application.doAddAccount()
+
+GET         /deleteAccount                         controllers.Account.deleteJSAccount()
+
+GET         /login                                 controllers.Application.login()
+POST        /login                                 controllers.Application.doLogin()
+
+GET         /logout                                com.feth.play.module.pa.controllers.Authenticate.logout()
+GET         /authenticate/:provider                com.feth.play.module.pa.controllers.Authenticate.authenticate(provider: String)
+
+GET         /signup                                controllers.Application.signup()
+POST        /signup                                controllers.Application.doSignup()
+
+GET         /accounts/unverified                   controllers.Signup.unverified()
+GET         /authenticate/:provider/denied         controllers.Signup.oAuthDenied(provider: String)
+
+GET         /accounts/verify/:token                controllers.Signup.verify(token: String)
+GET         /accounts/exists                       controllers.Signup.exists()
+
+GET         /accounts/password/reset/:token        controllers.Signup.resetPassword(token: String)
+POST        /accounts/password/reset               controllers.Signup.doResetPassword()
+
+GET         /accounts/password/change              controllers.Account.changePassword()
+POST        /accounts/password/change              controllers.Account.doChangePassword()
+
+GET         /accounts/verify                       controllers.Account.verifyEmail()
+
+GET         /accounts/add                          controllers.Account.link()
+
+GET         /accounts/disableJS                    controllers.Account.disableJobSeeker(userName: String)
+GET         /accounts/enableJS                     controllers.Account.enableJobSeeker(userName: String)
+
+GET         /account/enableJSRequest               controllers.Account.sendEnableJobSeekerRequest(userName: String)
+
+GET         /accounts/link                         controllers.Account.askLink()
+POST        /accounts/link                         controllers.Account.doLink()
+
+GET         /accounts/merge                        controllers.Account.askMerge()
+POST        /accounts/merge                        controllers.Account.doMerge()
+
+GET         /login/password/forgot                 controllers.Signup.forgotPassword(email: String ?= "")
+POST        /login/password/forgot                 controllers.Signup.doForgotPassword()
+
+# Map static resources from the /public folder to the /assets URL path
+GET         /assets/*file                          controllers.Assets.at(path="/public", file)
+GET         /public/*file                          controllers.Assets.at(path="/public", file)

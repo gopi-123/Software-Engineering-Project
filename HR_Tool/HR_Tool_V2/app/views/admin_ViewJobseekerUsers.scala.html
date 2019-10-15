@@ -1,0 +1,51 @@
+@(localUser: List[UserProfile])
+
+@import helper._
+@import helper.twitterBootstrap._
+@import com.feth.play.module.pa.views.html._
+@main(Messages("playauthenticate.index.title"), "Users") {
+
+    <div id="container">
+
+        <a class="btn btn-primary" href="@routes.Application.AddAccount()">Konto hinzufügen</a>
+        <br><br>
+        <ul  class="nav nav-pills">
+            <li role="presentation" class="active"><a href="@routes.Application.admin_ViewJobseekerUsers()">Mitarbeiter</a></li>
+            <li role="presentation"><a href="@routes.Application.admin_ViewRecruiterUsers()">Vorgesetzte</a></li>
+        </ul>
+        <br>
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Kategorie</th>
+                    <th>Telefonnummer</th>
+                    <th>Aktiviert</th>
+                    <th>Aktion</th>
+                </tr>
+            </thead>
+            <tbody>
+            @for(index <- 0 until localUser.size()) {
+                <tr>
+                    <td>@localUser(index).userName</td>
+                    <td>@localUser(index).category</td>
+                    <td>@localUser(index).phoneNo</td>
+                    <td>@localUser(index).enabled</td>
+                    @if(localUser(index).enabled) {
+                        <td>
+                            <a class="btn btn-danger" href="@routes.Account.disableJobSeeker(localUser(index).userName)">Deaktivieren</a>
+                        </td>
+                    }
+                    @if(!localUser(index).enabled) {
+                        <td>
+                            <a class="btn btn-primary" href="@routes.Account.enableJobSeeker(localUser(index).userName)">Aktivieren</a>
+                        </td>
+                    }
+                </tr>
+            }
+            </tbody>
+        </table>
+
+    </div>
+
+}

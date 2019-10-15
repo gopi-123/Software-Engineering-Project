@@ -1,0 +1,326 @@
+@(localUserProfile: models.UserProfile = null, changeForm: Form[models.UserProfile])
+
+@import helper._
+@import helper.twitterBootstrap._
+@import com.feth.play.module.pa.views.html._
+
+@main(Messages("playauthenticate.profile.title"),"profile") {
+
+    <script type="text/javascript">
+            $(document).ready(function () {
+                $('#languageSkills-options').multiselect();
+            });
+            $(document).ready(function () {
+                $('#computerSkills-options').multiselect();
+            });
+    </script>
+
+    <div class="wrapper">
+        @if(localUserProfile.enabled == false) {
+        <b>Ihr Account wurde deaktiviert.Um Änderungen vorzunehmen aktivieren Sie bitte.</b>
+    <div class="user-profile-disable">
+    }
+
+
+    @form(routes.Account.doUserProfile, 'class -> "form-horizontal", 'enctype -> "multipart/form-data") {
+
+        <legend>Profile Information</legend>
+
+        @if(!localUserProfile.registered) {
+            <p class="strong">Sie müssen die Registrierung für Ihr Profil abschließen, um für Vorgesetzte sichtbar zu sein.</p>
+        }
+
+        <div class="form-group">
+            <label for="userName">Vollständiger Name</label>
+            <div class="col-sm-3">
+            @if(!localUserProfile.registered) {
+                <input id="userName" name="userName" class="form-control" type="text" placeholder=@localUserProfile.userName value=@localUserProfile.userName required>
+            } else {
+                <input id="userName" name="userName" class="form-control" type="text" placeholder=@localUserProfile.userName value=@localUserProfile.userName readonly>
+            }
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="firstName">Vorname</label>
+            <div class="col-sm-3">
+            @if(!localUserProfile.registered) {
+                <input id="firstName" name="firstName" class="form-control" type="text" placeholder=@localUserProfile.firstName value=@localUserProfile.firstName required>
+            } else {
+                <input id="firstName" name="firstName" class="form-control" type="text" placeholder=@localUserProfile.firstName value=@localUserProfile.firstName readonly>
+            }
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="lastName">Nachname</label>
+            <div class="col-sm-3">
+            @if(!localUserProfile.registered) {
+                <input id="lastName" name="lastName" class="form-control" type="text" placeholder=@localUserProfile.lastName value=@localUserProfile.lastName required>
+            } else {
+                <input id="lastName" name="lastName" class="form-control" type="text" placeholder=@localUserProfile.lastName value=@localUserProfile.lastName readonly>
+            }
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="dOB">Geburtsdatum</label>
+            <div class="col-sm-3">
+            @if(!localUserProfile.registered) {
+                <input id="dOB" name="dOB" class="form-control" type="date" min="1930-12-31" max="2005-12-31" placeholder=@localUserProfile.dOB value=@localUserProfile.dOB required>
+            } else {
+                <input id="dOB" name="dOB" class="form-control" type="date" min="1930-12-31" max="2005-12-31" placeholder=@localUserProfile.dOB value=@localUserProfile.dOB>
+                }
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="empID">Personalnummer (6 Ziffern)</label>
+            <div class="col-sm-3">
+            @if(!localUserProfile.registered) {
+                <input pattern="[0-9]{6}"  id="empID" name="empID" class="form-control" type="text"   placeholder=@localUserProfile.empID value=@localUserProfile.empID required>
+            } else {
+                <input pattern="[0-9]{6}" id="empID" name="empID" class="form-control" type="text"   placeholder=@localUserProfile.empID value=@localUserProfile.empID readonly>
+            }
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="phoneNo">Telefonnummer (Ziffern)</label>
+            <div class="col-sm-3">
+            @if(!localUserProfile.registered) {
+                <input id="phoneNo"  name="phoneNo" class="form-control" type="number" placeholder=@localUserProfile.phoneNo value=@localUserProfile.phoneNo required>
+            } else {
+                <input id="phoneNo" name="phoneNo" class="form-control" type="number" placeholder=@localUserProfile.phoneNo value=@localUserProfile.phoneNo>
+                }
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="category">Personalkategorie</label>
+            <div class="col-sm-3">
+                <input class="form-control" list="category" name="category" placeholder=@localUserProfile.category required>
+                <datalist id="category">
+                     <option value="Wiss. Mitarbeiter">
+              <option value="Techniker">
+              <option value="Sekretariat">
+              <option value="Bibilothekar">
+              <option value="Handwerker">
+              <option value="Tierpfleger">
+              <option value="Stud. Angestellte">
+              <option value="Mittlerer Dienst">
+              <option value="Höherer Dienst">
+              <option value="Gehobener Dienst">
+
+                </datalist>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="languageSkills">Fremdsprachenkenntnisse</label>
+            <div class="col-sm-3">
+                <div class="input-group">
+                    <select class="form-control" id="languageSkills-options" name="languageSkills[]" multiple="multiple">
+                        <option value="German-A1">German-A1</option>
+                        <option value="German-A2">German-A2</option>
+                        <option value="German-B1">German-B1</option>
+                        <option value="German-B2">German-B2</option>
+                        <option value="German-C1">German-C1</option>
+                        <option value="German-C2">German-C2</option>
+                        <option value="English">English</option>
+                        <option value="French-A1">French-A1</option>
+                        <option value="French-A2">French-A2</option>
+                        <option value="French-B1">French-B1</option>
+                        <option value="French-B2">French-B2</option>
+                        <option value="French-C1">French-C1</option>
+                        <option value="French-C2">French-C2</option>
+                        <option value="Spanish-A1">Spanish-A1</option>
+                        <option value="Spanish-A2">Spanish-A2</option>
+                        <option value="Spanish-B1">Spanish-B1</option>
+                        <option value="Spanish-B2">Spanish-B2</option>
+                        <option value="Spanish-C1">Spanish-C1</option>
+                        <option value="Spanish-C2">Spanish-C2</option>
+                        <option value="Italien-A1">Italien-A1</option>
+                        <option value="Italien-A2">Italien-A2</option>
+                        <option value="Italien-B1">Italien-B1</option>
+                        <option value="Italien-B2">Italien-B2</option>
+                        <option value="Italien-C1">Italien-C1</option>
+                        <option value="Italien-C2">Italien-C2</option>
+                    </select>
+                </div>
+                @if(localUserProfile.languageSkills != null) {
+                    <p><b>Bisher ausgewählt:</b></p>
+                    @for(index <- 0 until localUserProfile.languageSkills.size()) {
+                        <p>@localUserProfile.languageSkills(index)</p>
+                    }
+                }
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="computerSkills">EDV-Kenntnisse</label>
+            <div class="col-sm-3">
+                <div class="input-group">
+                    <select class="form-control" id="computerSkills-options" name="computerSkills[]" multiple="multiple">
+                        <option value="MS-Office Word">MS-Office Word</option>
+                        <option value="MS-Office Excel">MS-Office Excel</option>
+                        <option value="MS-Office Powerpoint">MS-Office Powerpoint</option>
+                        <option value="MS-Office Access">MS-Office Access</option>
+                        <option value="SAP-HR">SAP-HR</option>
+                        <option value="SAP-FI">SAP-FI</option>
+                        <option value="SAP-MM">SAP-MM</option>
+                    </select>
+                </div>
+                @if(localUserProfile.computerSkills != null) {
+                    <p><b>Bisher ausgewählt:</b></p>
+                    @for(index <- 0 until localUserProfile.computerSkills.size()) {
+                        <p>@localUserProfile.computerSkills(index)</p>
+                    }
+                }
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="department">Enrichting</label>
+            <div class="col-sm-3">
+            @if(!localUserProfile.registered) {
+                <input pattern="[a-zA-Z0-9]{1,50}" id="department" name="department" class="form-control" type="text" placeholder=@localUserProfile.department value=@localUserProfile.department required>
+            } else {
+                <input pattern="[a-zA-Z0-9]{1,50}" id="department" name="department" class="form-control" type="text" placeholder=@localUserProfile.department value=@localUserProfile.department>
+                }
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="experience">Berufserfahrung (in Jahre)</label>
+            <div class="col-sm-3">
+            @if(!localUserProfile.registered) {
+                <input id="experience" name="experience" class="form-control" type="number" min="0" max="50"  step="0.2" placeholder=@localUserProfile.experience value=@localUserProfile.experience required>
+            } else {
+                <input id="experience" name="experience" class="form-control" type="number"  min="0" max="50"  step="0.2" placeholder=@localUserProfile.experience value=@localUserProfile.experience>
+                }
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="disability">Schwerbehinderung oder Gleichstellung (friewillige Angabe)</label>
+            <div class="col-sm-3">
+            @if(!localUserProfile.registered) {
+                <input id="disability" name="disability" class="form-control" type="number"  min="0" max="100" step="1" placeholder=@localUserProfile.disability value=@localUserProfile.disability required>
+            } else {
+                <input id="disability" name="disability" class="form-control" type="number"  min="0" max="100" placeholder=@localUserProfile.disability value=@localUserProfile.disability>
+                }
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="empAt">Besachäfttigt in Bereich seit</label>
+            <div class="col-sm-3">
+            @if(!localUserProfile.registered) {
+                <input id="empAt" name="empAt" class="form-control" type="Date" min="1980-12-31" max="2050-12-31" placeholder=@localUserProfile.empAt value=@localUserProfile.empAt required>
+            } else {
+                <input id="empAt" name="empAt" class="form-control" type="Date" min="1980-12-31" max="2050-12-31" placeholder=@localUserProfile.empAt value=@localUserProfile.empAt>
+                }
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="empSince">Beschäftigt an der UdS seit</label>
+            <div class="col-sm-3">
+            @if(!localUserProfile.registered) {
+                <input id="empSince" name="empSince" class="form-control" type="Date" min="1980-12-31" max="2050-12-31" placeholder=@localUserProfile.empSince value=@localUserProfile.empSince required>
+            } else {
+                <input id="empSince" name="empSince" class="form-control" type="Date" min="1980-12-31" max="2050-12-31" placeholder=@localUserProfile.empSince value=@localUserProfile.empSince>
+                }
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="fixedTerm">Befristet</label>
+            <div class="col-sm-3">
+                <input list="fixedTerm" name="fixedTerm" class="form-control" placeholder=@localUserProfile.fixedTerm required>
+                <datalist id="fixedTerm">
+                    <option value="Yes">
+                <option value="No">
+                </datalist>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="fixedTermTill">Wenn ja, bis</label>
+            <div class="col-sm-3">
+                <input id="fixedTermTill" name="fixedTermTill" class="form-control" type="date" min="1980-12-31" max="2050-12-31" placeholder=@localUserProfile.fixedTermTill value=@localUserProfile.fixedTermTill>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="weeklyWorkingTime">Beschäftigungsumfang</label>
+            <div class="col-sm-3">
+                <input  id="weeklyWorkingTime" name="weeklyWorkingTime" class="form-control" type="text" pattern="[0-9]{1}" placeholder=@localUserProfile.fixedTermTill value=@localUserProfile.weeklyWorkingTime>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="specialWorkTime">Besondere Arbeitszeitregelungen (z.B Arbeitszeitreduzierung, Elternzeit, Schichtarbeit)</label>
+            <div class="col-sm-3">
+                <input  pattern="[0-9]{1}" id="specialWorkTime" name="specialWorkTime" class="form-control" type="text" placeholder=@localUserProfile.specialWorkTime value=@localUserProfile.specialWorkTime>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="currentJob">Aktuell ausgeübte Tätigkeit</label>
+            <div class="col-sm-3">
+                <input id="currentJob" pattern="[a-zA-Z0-9]{1,50}" name="currentJob" class="form-control" type="text" placeholder=@localUserProfile.currentJob value=@localUserProfile.currentJob>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="importantTasks">Nennen Sie die Wichtigsten Aufgaben ihrer derzeitigen Tätigkeit</label>
+            <div class="col-sm-3">
+                <input id="importantTasks" name="importantTasks" class="form-control" type="text" placeholder=@localUserProfile.importantTasks value=@localUserProfile.importantTasks>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="highestEducationLevel">Bildungsabchluss</label>
+            <div class="col-sm-3">
+                <input id="highestEducationLevel" name="highestEducationLevel" class="form-control" type="text" placeholder=@localUserProfile.highestEducationLevel value=@localUserProfile.highestEducationLevel>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="additionalEducation">Zusatzqualifikation</label>
+            <div class="col-sm-3">
+                <input id="additionalEducation" name="additionalEducation" class="form-control" type="text" placeholder=@localUserProfile.additionalEducation value=@localUserProfile.additionalEducation>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="futureJobOpportunities">In welchen Tätigkeitsbereichen oder mit welchen Schwerpunkten, Fucktionen sehen Sie für sich zukünftige Einsatzmöglichkeiten?</label>
+            <div class="col-sm-3">
+                <input id="futureJobOpportunities" name="futureJobOpportunities" class="form-control" type="text" placeholder=@localUserProfile.futureJobOpportunities value=@localUserProfile.futureJobOpportunities>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="resume">Lebenslauf(PDF)</label>
+            <div class="col-sm-3">
+            @if(!localUserProfile.registered) {
+                <input id="resume" name="resume" class="input-file" type="file" required>
+            } else {
+                <input id="resume" name="resume" class="input-file" type="file">
+                }
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-sm-3">
+                <input type="submit" value="Speichern" class="btn btn-success" style="margin-left: 440px;">
+            </div>
+        </div>
+
+    }
+
+    </div>
+
+}

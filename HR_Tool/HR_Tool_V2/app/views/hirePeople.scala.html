@@ -1,0 +1,88 @@
+@(hirePeopleForm: Form[models.HirePeople])
+
+@import helper._
+@import helper.twitterBootstrap._
+@import com.feth.play.module.pa.views.html._
+
+@main(Messages("playauthenticate.profile.title"),"Leute mieten") {
+
+    <div class="wrapper">
+
+    @form(routes.Application.doHirePeople, 'class -> "form-horizontal") {
+
+        <legend>Anmeldung für Vorgesetzte</legend>
+
+        <div style="margin-left: -80px;">
+
+            <div class="form-horizontal form-group">
+                <label for="userName">Vollständiger Name</label>
+                <div class="col-sm-4">
+                    <input id="userName" name="userName" class="form-control" type="text" placeholder="" required>
+                    
+                </div>
+            </div>
+
+            <div class="form-horizontal form-group">
+                <label for="department">Einrichtung</label>
+                <div class="col-sm-4">
+                    <input id="department" name="department" class="form-control" type="text" placeholder="" required>
+                    
+                </div>
+            </div>
+
+            <div class="form-horizontal form-group">
+                <label for="empID">Personalnummer</label>
+                <div class="col-sm-4">
+                    <input id="empID" name="empID" class="form-control" type="text" placeholder="" required>
+                   
+                </div>
+            </div>
+
+            <div class="form-horizontal form-group">
+                <label for="category">Auf der Suche nach</label>
+                <div class="col-sm-4">
+                    <input class="form-control" list="category" name="category" placeholder="" required>
+                    <datalist id="category">
+                      <option value="Wiss. Mitarbeiter">
+                      <option value="Techniker">
+                      <option value="Sekretariat">
+                      <option value="Bibilothekar">
+                      <option value="Handwerker">
+                      <option value="Tierpfleger">
+                      <option value="Stud. Angestellte">
+                      <option value="Mittlerer Dienst">
+                      <option value="Höherer Dienst">
+                      <option value="Gehobener Dienst">
+                    </datalist>
+                   
+                </div>
+            </div>
+
+            <div class="form-horizontal form-group">
+                <label for="eMail">E-Mail</label>
+                <div class="col-sm-4">
+                    <input id="eMail" name="eMail" class="form-control" type="text" placeholder="" required>
+                   
+                </div>
+            </div>
+
+            <div class="form-horizontal form-group">
+                <div class="col-sm-4">
+                    <input type="checkbox" name="" value="" checked="checked" style="margin-left: 200px;" required>
+                    Ich stimme den AGB (AGB => Benutzrregeln) zu
+                </div>
+            </div>
+
+            <div class="form-horizontal form-group">
+                <div class="col-sm-4">
+                    <input type="submit" value="Senden" class="btn btn-primary" style="margin-left: 580px;">
+                </div>
+            </div>
+
+        </div>
+
+    }
+
+    </div>
+
+}

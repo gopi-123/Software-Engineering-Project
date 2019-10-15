@@ -1,0 +1,9 @@
+@(verificationUrl: String, token: String, name: String, email: String)Hey @name, 
+
+
+bitte klicken Sie auf nachfolgenden link um ihr konto zu verifizieren.
+
+@verificationUrl
+
+Fruendliche Grüße,
+Ihre interne Positionsvermittlung

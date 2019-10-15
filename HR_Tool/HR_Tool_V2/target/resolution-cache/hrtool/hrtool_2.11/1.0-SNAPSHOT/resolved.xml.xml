@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ivy-module version="2.0" xmlns:e="http://ant.apache.org/ivy/extra">
+	<info organisation="hrtool"
+		module="hrtool_2.11"
+		revision="1.0-SNAPSHOT"
+		status="integration"
+		publication="20170618193115"
+	>
+		<description>
+		hrtool
+		</description>
+	</info>
+	<configurations>
+		<conf name="compile" visibility="public" description=""/>
+		<conf name="runtime" visibility="public" description="" extends="compile"/>
+		<conf name="test" visibility="public" description="" extends="runtime"/>
+		<conf name="provided" visibility="public" description=""/>
+		<conf name="optional" visibility="public" description=""/>
+		<conf name="compile-internal" visibility="private" description="" extends="compile,optional,provided"/>
+		<conf name="runtime-internal" visibility="private" description="" extends="runtime,optional"/>
+		<conf name="test-internal" visibility="private" description="" extends="test,optional,provided"/>
+		<conf name="plugin" visibility="private" description=""/>
+		<conf name="sources" visibility="public" description=""/>
+		<conf name="docs" visibility="private" description=""/>
+		<conf name="pom" visibility="public" description=""/>
+		<conf name="scala-tool" visibility="private" description=""/>
+		<conf name="echo-trace-compile" visibility="private" description="" extends="runtime-internal"/>
+		<conf name="echo-trace-test" visibility="private" description="" extends="echo-trace-compile,test-internal"/>
+		<conf name="echo-weave" visibility="private" description=""/>
+		<conf name="echo-sigar" visibility="private" description=""/>
+	</configurations>
+	<publications>
+		<artifact name="hrtool_2.11" type="pom" ext="pom" conf="pom"/>
+		<artifact name="hrtool_2.11" type="jar" ext="jar" conf="compile"/>
+		<artifact name="hrtool_2.11" type="src" ext="jar" conf="sources" e:classifier="sources"/>
+		<artifact name="hrtool_2.11" type="doc" ext="jar" conf="docs" e:classifier="javadoc"/>
+	</publications>
+	<dependencies>
+		<dependency org="org.scala-lang" name="scala-compiler" rev="2.11.1" conf="scala-tool->default,optional(default)"/>
+		<dependency org="org.scala-lang" name="scala-library" rev="2.11.1" conf="scala-tool->default,optional(default);compile->default(compile)"/>
+		<dependency org="com.typesafe.play" name="twirl-api_2.11" rev="1.0.2" conf="compile->default(compile)"/>
+		<dependency org="com.typesafe.play" name="play_2.11" rev="2.3.10" conf="compile->default(compile)"/>
+		<dependency org="com.typesafe.play" name="play-test_2.11" rev="2.3.10" conf="test->default(compile)"/>
+		<dependency org="com.typesafe.play" name="play-docs_2.11" rev="2.3.10" conf="docs->default(compile)"/>
+		<dependency org="com.typesafe.play" name="play-java_2.11" rev="2.3.10" conf="compile->default(compile)"/>
+		<dependency org="org.aspectj" name="aspectjweaver" rev="1.7.3" conf="echo-weave->default(compile)"/>
+		<dependency org="com.typesafe.trace" name="trace-sigar-libs" rev="0.1.6" conf="echo-sigar->default(compile)"/>
+		<dependency org="be.objectify" name="deadbolt-java_2.11" rev="2.3.0-RC1" conf="compile->default(compile)"/>
+		<dependency org="com.feth" name="play-authenticate_2.11" rev="0.6.5-SNAPSHOT" conf="compile->default(compile)"/>
+		<dependency org="org.mongodb" name="mongo-java-driver" rev="2.13.0" conf="compile->default(compile)"/>
+		<dependency org="org.mongodb.morphia" name="morphia" rev="0.108" conf="compile->default(compile)"/>
+		<dependency org="org.mongodb.morphia" name="morphia-logging-slf4j" rev="0.108" conf="compile->default(compile)"/>
+		<dependency org="org.mongodb.morphia" name="morphia-validation" rev="0.108" conf="compile->default(compile)"/>
+		<dependency org="com.typesafe.play" name="play-java-jdbc_2.11" rev="2.3.10" conf="compile->default(compile)"/>
+		<dependency org="com.typesafe.play" name="play-java-ebean_2.11" rev="2.3.10" conf="compile->default(compile)"/>
+		<dependency org="com.typesafe.play" name="play-cache_2.11" rev="2.3.10" conf="compile->default(compile)"/>
+		<dependency org="com.typesafe.play" name="play-java-ws_2.11" rev="2.3.10" conf="compile->default(compile)"/>
+	</dependencies>
+</ivy-module>

@@ -1,0 +1,124 @@
+@(userProfile: models.UserProfile, role: String)
+
+@import helper._
+@import helper.twitterBootstrap._
+
+@main(Messages("playauthenticate.change.password.title")) {
+
+    <div id="container">
+
+        <table class="table" style="width: 50%; margin: 0px auto;">
+            <thead>
+                <tr>
+                    <th colspan="8">@userProfile.userName</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Vorname:</td>
+                    <td>@userProfile.firstName</td>
+                </tr>
+                <tr>
+                    <td>Nachname:</td>
+                    <td>@userProfile.lastName</td>
+                </tr>
+                <tr>
+                    <td>Geburtsdatum:</td>
+                    <td>@userProfile.dOB</td>
+                </tr>
+                <tr>
+                    <td>Personalnummer :</td>
+                    <td>@userProfile.empID</td>
+                </tr>
+                <tr>
+                    <td>Personalkategorie:</td>
+                    <td>@userProfile.category</td>
+                </tr>
+                <tr>
+                    <td>Telefonnummer</td>
+                    <td>@userProfile.phoneNo</td>
+                </tr>
+                <tr>
+                    <td>EDV-Kenntnisse:</td>
+                    @for(index <- 0 until userProfile.computerSkills.size()) {
+                        <td>@userProfile.computerSkills(index)</td>
+                    }
+                </tr>
+                <tr>
+                    <td>Fremdsprachenkenntnisse:</td>
+                    @for(index <- 0 until userProfile.languageSkills.size()) {
+                        <td>@userProfile.languageSkills(index)</td>
+                    }
+                </tr>
+                <tr>
+                    <td>Berufserfahrung:</td>
+                    <td>@userProfile.experience</td>
+                </tr>
+                <tr>
+                    <td>Einrichtung:</td>
+                    <td>@userProfile.department</td>
+                </tr>
+                <tr>
+                    <td>Besachäftigt im Bereich seit:</td>
+                    <td>@userProfile.empAt</td>
+                </tr>
+                <tr>
+                    <td>Kontostatus:</td>
+                    <td>@userProfile.enabled</td>
+                </tr>
+                <tr>
+                    <td>Befristet:</td>
+                    <td>@userProfile.fixedTerm</td>
+                </tr>
+                @if(userProfile.fixedTerm == true) {
+                    <tr>
+                        <td>Wenn ja, bis:</td>
+                        <td>@userProfile.fixedTermTill</td>
+                    </tr>
+                }
+                <tr>
+                    <td>Beschäftigungsumfang:</td>
+                    <td>@userProfile.weeklyWorkingTime</td>
+                </tr>
+                <tr>
+                    <td>Besondre Arbeitszeitregelungen (z.B Arbeitszeitreduzierung, Elternzeit, Schichtarbeit):</td>
+                    <td>@userProfile.specialWorkTime</td>
+                </tr>
+                <tr>
+                    <td>Aktuell ausgeübte Tätigkeit:</td>
+                    <td>@userProfile.currentJob</td>
+                </tr>
+                <tr>
+                    <td>Aktuell wichtige Aufgaben:</td>
+                    <td>@userProfile.importantTasks</td>
+                </tr>
+                <tr>
+                    <td>Höchster Bildungsabschluss:</td>
+                    <td>@userProfile.highestEducationLevel</td>
+                </tr>
+                <tr>
+                    <td>Zusatzqualifikation:</td>
+                    <td>@userProfile.additionalEducation</td>
+                </tr>
+                <tr>
+                    <td>Zukünftige Einsatzmöglichkeiten:</td>
+                    <td>@userProfile.futureJobOpportunities</td>
+                </tr>
+                <tr>
+                    <td colspan="8">
+                        @if(role == "Admin") {
+                            @if(userProfile.enabled == false) {
+                                <a class="btn btn-success" style="float: right;" href='@routes.Account.enableJobSeeker(userProfile.userName)'>Account aktivieren</a>
+                            }
+                            @if(userProfile.enabled == true) {
+                                <a class="btn btn-success" style="float: right;" href='@routes.Account.disableJobSeeker(userProfile.userName)'>Account deaktivieren</a>
+                            }
+                        }
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+    </div> @* container *@
+
+}

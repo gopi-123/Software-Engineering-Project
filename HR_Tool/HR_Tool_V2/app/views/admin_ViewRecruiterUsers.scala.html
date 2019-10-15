@@ -1,0 +1,50 @@
+@(localUser: List[User])
+
+@import helper._
+@import helper.twitterBootstrap._
+@import com.feth.play.module.pa.views.html._
+@main(Messages("playauthenticate.index.title"), "Users") {
+
+    <div id="container">
+
+        <a class="btn btn-primary" href="@routes.Application.AddAccount()">Konto hinzufügen</a>
+        <br><br>
+        <ul  class="nav nav-pills">
+            <li role="presentation"><a href="@routes.Application.admin_ViewJobseekerUsers()">Mitarbeiter</a></li>
+            <li role="presentation" class="active"><a href="@routes.Application.admin_ViewRecruiterUsers()">Vorgesetzte</a></li>
+        </ul>
+        <br>
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Personalnummer</th>
+                    <th>Einrichtung</th>
+                    <th>Kategorie</th>
+                    <th>Zugang bis</th>
+                    <th>Aktion</th>
+                </tr>
+            </thead>
+            <tbody>
+            @for(index <- 0 until localUser.size()) {
+                <tr>
+                    <td>@localUser(index).name</td>
+                    <td>@localUser(index).email</td>
+                    <td>@localUser(index).empID</td>
+                    <td>@localUser(index).department</td>
+                    <td>@localUser(index).category_acccess</td>
+                    <td>@localUser(index).access_until</td>
+                    <td>
+                        <a class="btn btn-primary" href="@routes.Account.grantAccessToRecruiter(localUser(index).email)">Gewähren</a>
+                        <a class="btn btn-danger" href="@routes.Account.evokeAccessToRecruiter(localUser(index).email)">Widerrufen</a>
+			            <a class="btn btn-primary" href="@routes.Account.categoryToRecruiter(localUser(index).email)">Kategorie bearbeiten</a>
+                    </td>
+                </tr>
+            }
+            </tbody>
+        </table>
+
+    </div>
+
+}

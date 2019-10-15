@@ -1,0 +1,16 @@
+[debug] Other repositories:
+[debug] 	FileRepository(publish-m2-local,FileConfiguration(true,None),Patterns(ivyPatterns=List(), artifactPatterns=List(C:/Users/Subhashini/.m2/repository/[organisation]/[module](_[scalaVersion])(_[sbtVersion])/[revision]/[artifact]-[revision](-[classifier]).[ext]), isMavenCompatible=true, descriptorOptional=false, skipConsistencyCheck=false))
+[debug] Default repositories:
+[debug] 	Raw(ProjectResolver(inter-project, mapped: ))
+[debug] 	FileRepository(local,FileConfiguration(true,None),Patterns(ivyPatterns=List(${ivy.home}/local/[organisation]/[module]/(scala_[scalaVersion]/)(sbt_[sbtVersion]/)[revision]/[type]s/[artifact](-[classifier]).[ext]), artifactPatterns=List(${ivy.home}/local/[organisation]/[module]/(scala_[scalaVersion]/)(sbt_[sbtVersion]/)[revision]/[type]s/[artifact](-[classifier]).[ext]), isMavenCompatible=false, descriptorOptional=false, skipConsistencyCheck=false))
+[debug] 	public: http://repo1.maven.org/maven2/
+[debug] 	Typesafe Releases Repository: https://repo.typesafe.com/typesafe/releases/
+[debug] 	Typesafe Releases: http://repo.typesafe.com/typesafe/releases
+[debug] 	Apache: http://repo1.maven.org/maven2/
+[debug] 	jBCrypt Repository: http://repo1.maven.org/maven2/org/
+[debug] 	play-easymail (release): http://joscha.github.io/play-easymail/repo/releases/
+[debug] 	play-easymail (snapshot): http://joscha.github.io/play-easymail/repo/snapshots/
+[debug] 	URLRepository(Objectify Play Repository,Patterns(ivyPatterns=List(http://schaloner.github.io/releases/[organisation]/[module]/(scala_[scalaVersion]/)(sbt_[sbtVersion]/)[revision]/[type]s/[artifact](-[classifier]).[ext]), artifactPatterns=List(http://schaloner.github.io/releases/[organisation]/[module]/(scala_[scalaVersion]/)(sbt_[sbtVersion]/)[revision]/[type]s/[artifact](-[classifier]).[ext]), isMavenCompatible=false, descriptorOptional=false, skipConsistencyCheck=false))
+[debug] 	play-authenticate (release): http://joscha.github.io/play-authenticate/repo/releases/
+[debug] 	play-authenticate (snapshot): http://joscha.github.io/play-authenticate/repo/snapshots/
+[debug] Using inline dependencies specified in Scala.
